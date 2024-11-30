@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+
+
+    <!-- Tu archivo CSS local -->
+    <link href="Estilos/master.css" rel="stylesheet">
+    <link href="Estilos/finanzas.css" rel="stylesheet">
+    <link href="Estilos/chart.css" rel="stylesheet">
+
+    <!-- Fuentes externas -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+
+    <!-- Otros archivos JS o de utilidad -->
+    <script src="JavaScript/sideBar.js"></script>
+    <script src="JavaScript/mostrarcharts.js"></script>
+
+    <title>Tu Página</title>
+</head>
+
+<body>
+    <div class="contenedor-general-negro overflow-hidden container-fluid d-flex flex-column p-0 w-100 h-100">
+
+        <!-- barra superior -->
+        <div class="barra-superior-estatica container-fluid d-flex flex-row w-100 align-content-center">
+            <div class="h-100 logo-principal-sreamfy align-content-center">
+                <a href="#" class="logo-principal-sreamfy-texto container-fluid d-flex align-content-center">
+                    <img src="Imagenes/logo_mejorado-removebg%20-%20Copy.png" />
+                </a>
+            </div>
+            <div class="m-0 p-0 h-100 container-fluid d-flex flex-row align-content-center justify-content-center">
+                <div class="w-75 d-flex flex-row align-content-center align-items-center buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="input-text-normal" placeholder="Buscar" />
+                </div>
+                <div class="nombreUsuario container-fluid w-25 d-flex flex-column">
+                    <div class="b-0 m-0 p-0">
+                        <button class="btn dropdown-toggle dropdown-master-user m-0 p-0" id="btnUsuario"
+                            data-bs-toggle="dropdown" type="button" aria-expanded="false">
+                            <img src="Imagenes/yo.jpg" class="image-profile-pic-mini img-fluid" />
+                            <asp:Label ID="lblNombreUsuario" CssClass="nombre-usuario-dropdown" ClientIDMode="Static"
+                                runat="server" Text="Silvana Quiroz"></asp:Label>
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-streamfy">
+                            <a href="ArtistaPerfil.aspx" class="dropdown-item dropdown-item-perfil-user">Mi perfil</a>
+                            <a href="GestionarPerfilArtista.aspx" class="dropdown-item dropdown-item-perfil-user">Editar
+                                cuenta</a>
+
+                            <!-- editar esto con el link del reporte o lo q dispare eso -->
+                            <a href="VerReporteArtista.aspx" class="dropdown-item dropdown-item-perfil-user">Ver
+                                reporte</a>
+
+
+                            <a data-bs-toggle="modal" data-bs-target="#cerrarSesionModal" style="cursor: pointer;">
+                                <div id="opCerrarSesion" class="dropdown-item dropdown-item-perfil-user">
+                                    Cerrar sesión
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- contenido total -->
+        <div class="contenedor-general-negro overflow-hidden container-fluid d-flex flex-row p-0 h-100">
+
+            <!-- barra lateral (estatico) -->
+            <div id="bdSidebar" class="barralateral d-flex flex-column flex-shrink-0 bg-white texto-color-morado"
+                data-bs-scroll="true">
+
+                <div class="flex-column" id="sidebarOpciones">
+
+                    <!-- OPCIONES PARA AGREGAR -->
+                    <a href="#">
+                        <div id="opPerfil" class="sidebarPillCustomized">
+                            <i class="fa-solid fa-user"></i>
+                            Mi perfil
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="opFinanzasPersonales" class="sidebarPillCustomized">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Finanzas personales
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="opFinanzasEmpresariales" class="sidebarPillCustomized">
+                            <i class="fa-regular fa-building"></i>
+                            Finanzas empresariales
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div id="opAcademico" class="sidebarPillCustomized">
+                            <i class="fa-regular fa-hundred-points"></i>
+                            Rendimiento académico
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="opDeportivo" class="sidebarPillCustomized">
+                            <i class="fa-solid fa-person-running"></i>
+                            Rendimiento deportivo
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- contenedor derecha -->
+            <div class="contenedor-derecha-grande container-fluid d-flex flex-row w-100">
+
+                <!-- contenido central (variable) -->
+                <div class="contenidoCentralVariable d-flex flex-column w-100 h-100">
+                    <div class="contenedor-general container-fluid d-flex flex-column w-100 h-100">
+                        <div class="container-fluid d-flex flex-row container-cabecera justify-content-center">
+                            <div class="card-cabecera d-flex flex-column align-content-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="fa-solid fa-clothes-hanger icon-card-cabecera"></i>
+                                    <div>Ropa</div>
+                                </div>
+                                <div class="d-flex flex-row monto-container">
+                                    <div class="moneda">S/.</div>
+                                    <div class="monto">650</div>
+                                </div>
+                            </div>
+                            <div class="separador-vertical"></div>
+                            <div class="card-cabecera d-flex flex-column align-content-center">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class="fa-solid fa-utensils icon-card-cabecera" style="color: #107c42"></i>
+                                    <div>Alimentos</div>
+                                </div>
+                                <div class="d-flex flex-row monto-container">
+                                    <div class="moneda">S/.</div>
+                                    <div class="monto">1,250</div>
+                                </div>
+                            </div>
+                            <div class="separador-vertical"></div>
+                            <div class="card-cabecera d-flex flex-column align-content-center">
+                                <div class="d-flex flex-row align-content-center align-items-center">
+                                    <i class="fa-solid fa-car-side icon-card-cabecera" style="color: #27a8e7"></i>
+                                    <div>Transporte</div>
+                                </div>
+                                <div class="d-flex flex-row monto-container">
+                                    <div class="moneda">S/.</div>
+                                    <div class="monto">200</div>
+                                </div>
+                            </div>
+                            <div class="separador-vertical"></div>
+                            <div class="card-cabecera d-flex flex-column align-content-center">
+                                <div class="d-flex flex-row align-content-center align-items-center">
+                                    <i class="fa-solid fa-martini-glass-citrus  icon-card-cabecera"
+                                        style="color: #d71848"></i>
+                                    <div>Salidas</div>
+                                </div>
+                                <div class="d-flex flex-row monto-container">
+                                    <div class="moneda">S/.</div>
+                                    <div class="monto">1,500</div>
+                                </div>
+                            </div>
+                            <div class="separador-vertical"></div>
+                            <div class="card-cabecera d-flex flex-column align-content-center">
+                                <div class="d-flex flex-row align-content-center align-items-center">
+                                    <i class="fa-solid fa-plane-departure icon-card-cabecera"
+                                        style="color: #ffae0f"></i>
+                                    <div>Viajes</div>
+                                </div>
+                                <div class="d-flex flex-row monto-container">
+                                    <div class="moneda">S/.</div>
+                                    <div class="monto">2,500</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row">
+                            <div class="container-barras d-flex flex-column container-central">
+                                <div class="subtitulo-barras">
+                                    Gasto mensual
+                                </div>
+                                <div class="monto-barras">
+                                    <div class="d-flex flex-row monto-container">
+                                        <div class="moneda">S/.</div>
+                                        <div class="monto">6,100</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row">
+                                    <div class="barra-container">
+                                        <div id="barra-ropa" class="barra ropa" style="height: 40%;"
+                                            data-monto="S/: 650">
+                                            <span class="barra-label">Ropa</span>
+                                        </div>
+                                        <div id="barra-alimentos" class="barra alimentos" style="height: 60%;" data-monto="S/: 1,250">
+                                            <span class="barra-label">Alimentos</span>
+                                        </div>
+                                        <div class="barra transporte" style="height: 20%;" data-monto="S/: 200">
+                                            <span class="barra-label">Transporte</span>
+                                        </div>
+                                        <div class="barra salidas" style="height: 80%;" data-monto="S/: 1,500">
+                                            <span class="barra-label">Salidas</span>
+                                        </div>
+                                        <div class="barra viajes" style="height: 100%;" data-monto="S/: 2,500">
+                                            <span class="barra-label">Viajes</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="container-consejo derecha p-0">
+                                <div class="card-alerta">
+                                    <div class="card-content">
+                                        <div class="icon-alerta">
+                                            <i class="fa-solid fa-exclamation-circle"></i>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3 class="titulo-alerta">¡Este mes tus gastos de viajes han excedido el
+                                                presupuesto establecido!</h3>
+                                            <p class="consejo-alerta">Es importante llevar un control sobre tus gastos.
+                                                Considera reducir los gastos de ocio y ahorrar más para el futuro.</p>
+                                        </div>
+                                        <div class="action-button">
+                                            <button class="btn-registrar">Registrar nuevo mes</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex flex-row">
+                            <div class="container-fluid container-central d-flex flex-column">
+                                <div id="linear-ropa" class="container-fluid h-100 d-flex flex-column">
+                                    <div class="subtitulo-barras">
+                                        Histórico anual: Ropa
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart">
+                                            <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Eje horizontal (Meses) -->
+                                                <line class="axis" x1="50" y1="350" x2="950" y2="350" />
+                                                <line class="axis" x1="50" y1="50" x2="50" y2="350" />
+
+                                                <!-- Puntos en la línea -->
+                                                <circle class="data-point" cx="80" cy="300" r="5" data-month="Enero"
+                                                    data-value="120"></circle>
+                                                <circle class="data-point" cx="160" cy="270" r="5" data-month="Febrero"
+                                                    data-value="150"></circle>
+                                                <circle class="data-point" cx="240" cy="230" r="5" data-month="Marzo"
+                                                    data-value="200"></circle>
+                                                <circle class="data-point" cx="320" cy="260" r="5" data-month="Abril"
+                                                    data-value="180"></circle>
+                                                <circle class="data-point" cx="400" cy="210" r="5" data-month="Mayo"
+                                                    data-value="230"></circle>
+                                                <circle class="data-point" cx="480" cy="180" r="5" data-month="Junio"
+                                                    data-value="250"></circle>
+                                                <circle class="data-point" cx="560" cy="150" r="5" data-month="Julio"
+                                                    data-value="300"></circle>
+                                                <circle class="data-point" cx="640" cy="120" r="5" data-month="Agosto"
+                                                    data-value="350"></circle>
+                                                <circle class="data-point" cx="720" cy="190" r="5"
+                                                    data-month="Septiembre" data-value="270"></circle>
+                                                <circle class="data-point" cx="800" cy="230" r="5" data-month="Octubre"
+                                                    data-value="220"></circle>
+                                                <circle class="data-point" cx="880" cy="100" r="5"
+                                                    data-month="Noviembre" data-value="650"></circle>
+
+                                                <!-- Líneas que conectan los puntos -->
+                                                <line class="line" x1="80" y1="300" x2="160" y2="270"></line>
+                                                <line class="line" x1="160" y1="270" x2="240" y2="230"></line>
+                                                <line class="line" x1="240" y1="230" x2="320" y2="260"></line>
+                                                <line class="line" x1="320" y1="260" x2="400" y2="210"></line>
+                                                <line class="line" x1="400" y1="210" x2="480" y2="180"></line>
+                                                <line class="line" x1="480" y1="180" x2="560" y2="150"></line>
+                                                <line class="line" x1="560" y1="150" x2="640" y2="120"></line>
+                                                <line class="line" x1="640" y1="120" x2="720" y2="190"></line>
+                                                <line class="line" x1="720" y1="190" x2="800" y2="230"></line>
+                                                <line class="line" x1="800" y1="230" x2="880" y2="100"></line>
+
+                                                <!-- Meses en el eje horizontal -->
+                                                <text class="label" x="80" y="370">E</text>
+                                                <text class="label" x="160" y="370">F</text>
+                                                <text class="label" x="240" y="370">M</text>
+                                                <text class="label" x="320" y="370">A</text>
+                                                <text class="label" x="400" y="370">M</text>
+                                                <text class="label" x="480" y="370">J</text>
+                                                <text class="label" x="560" y="370">J</text>
+                                                <text class="label" x="640" y="370">A</text>
+                                                <text class="label" x="720" y="370">S</text>
+                                                <text class="label" x="800" y="370">O</text>
+                                                <text class="label" x="880" y="370">N</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="linear-alimentos" class="container-fluid h-100 d-none flex-column">
+                                    <div class="subtitulo-barras">
+                                        Histórico anual: Alimentos
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart">
+                                            <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Eje horizontal (Meses) -->
+                                                <line class="axis" x1="50" y1="350" x2="950" y2="350" />
+                                                <line class="axis" x1="50" y1="50" x2="50" y2="350" />
+
+                                                <!-- Puntos en la línea -->
+                                                <circle class="data-point alimentos" cx="80" cy="300" r="5" data-month="Enero"
+                                                    data-value="120"></circle>
+                                                <circle class="data-point alimentos" cx="160" cy="270" r="5" data-month="Febrero"
+                                                    data-value="150"></circle>
+                                                <circle class="data-point alimentos" cx="240" cy="230" r="5" data-month="Marzo"
+                                                    data-value="200"></circle>
+                                                <circle class="data-point alimentos" cx="320" cy="260" r="5" data-month="Abril"
+                                                    data-value="180"></circle>
+                                                <circle class="data-point alimentos" cx="400" cy="210" r="5" data-month="Mayo"
+                                                    data-value="230"></circle>
+                                                <circle class="data-point alimentos" cx="480" cy="180" r="5" data-month="Junio"
+                                                    data-value="250"></circle>
+                                                <circle class="data-point alimentos" cx="560" cy="150" r="5" data-month="Julio"
+                                                    data-value="300"></circle>
+                                                <circle class="data-point alimentos" cx="640" cy="120" r="5" data-month="Agosto"
+                                                    data-value="350"></circle>
+                                                <circle class="data-point alimentos" cx="720" cy="190" r="5"
+                                                    data-month="Septiembre" data-value="270"></circle>
+                                                <circle class="data-point alimentos" cx="800" cy="230" r="5" data-month="Octubre"
+                                                    data-value="220"></circle>
+                                                <circle class="data-point alimentos" cx="880" cy="100" r="5"
+                                                    data-month="Noviembre" data-value="650"></circle>
+
+                                                <!-- Líneas que conectan los puntos -->
+                                                <line class="line alimentos" x1="80" y1="300" x2="160" y2="270"></line>
+                                                <line class="line alimentos" x1="160" y1="270" x2="240" y2="230"></line>
+                                                <line class="line alimentos" x1="240" y1="230" x2="320" y2="260"></line>
+                                                <line class="line alimentos" x1="320" y1="260" x2="400" y2="210"></line>
+                                                <line class="line alimentos" x1="400" y1="210" x2="480" y2="180"></line>
+                                                <line class="line alimentos" x1="480" y1="180" x2="560" y2="150"></line>
+                                                <line class="line alimentos" x1="560" y1="150" x2="640" y2="120"></line>
+                                                <line class="line alimentos" x1="640" y1="120" x2="720" y2="190"></line>
+                                                <line class="line alimentos" x1="720" y1="190" x2="800" y2="230"></line>
+                                                <line class="line alimentos" x1="800" y1="230" x2="880" y2="100"></line>
+
+                                                <!-- Meses en el eje horizontal -->
+                                                <text class="label" x="80" y="370">E</text>
+                                                <text class="label" x="160" y="370">F</text>
+                                                <text class="label" x="240" y="370">M</text>
+                                                <text class="label" x="320" y="370">A</text>
+                                                <text class="label" x="400" y="370">M</text>
+                                                <text class="label" x="480" y="370">J</text>
+                                                <text class="label" x="560" y="370">J</text>
+                                                <text class="label" x="640" y="370">A</text>
+                                                <text class="label" x="720" y="370">S</text>
+                                                <text class="label" x="800" y="370">O</text>
+                                                <text class="label" x="880" y="370">N</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row p-0 justify-content-center gap-5">
+                            <div class="boton">
+                                Ver meses anteriores
+                            </div>
+                            <div class="boton">
+                                Ver gastos registrados
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- modal de confirmacion -->
+        <!-- Modal -->
+        <div class="modal fade" id="cerrarSesionModal" tabindex="-1" aria-labelledby="cerrarSesionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-streamfy">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="guardarModalLabel">Cerrar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0">
+                        ¿Estás seguro de que deseas cerrar sesión?
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="boton-confirmar-streamfy cancelar-boton-streamfy modal-cancelar"
+                            data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="boton-confirmar-streamfy" id="confirmarCerrarSesion"
+                            onclick="cerrarSesion()">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

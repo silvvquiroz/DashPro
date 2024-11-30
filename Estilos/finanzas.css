@@ -22,6 +22,7 @@
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: scroll; /* Add vertical scrollbar */
     scrollbar-width: none;
+    padding-bottom: 20px;
 }
 
 .separador-vertical {
@@ -79,6 +80,7 @@
 
 .container-cabecera {
     height: 120px;
+    min-height: 120px;
     border: none;
     border-radius: 15px;
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -272,7 +274,15 @@
 .container-consejo {
     width: 35%;
     padding: 0 !important;
+    
+}
+
+.derecha {
     margin-left: 20px;
+}
+
+.izquierda {
+    margin-right: 20px;
 }
 
 
