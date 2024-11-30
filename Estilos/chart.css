@@ -45,27 +45,20 @@ h1 {
 .data-point {
     fill: #ed6c47;
     cursor: pointer;
-    transition: fill 0.3s ease;
-    position: relative; /* Aseguramos que el contenedor de cada punto tenga un posicionamiento relativo */
 }
 
 /* Hover sobre los puntos */
 .data-point:hover {
 }
 
-/* Estilos para mostrar el monto */
-.data-point:hover::after {
-    content: attr(data-value);
-    position: absolute;
-    background-color: #333;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    width: 80px;
-    text-align: center;
-    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+.value {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    cursor: pointer;
+}
 
+.value:hover {
+    font-size: 120%;
 }
 
 .ropa {
