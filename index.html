@@ -26,718 +26,777 @@
 </head>
 
 <body>
-    <div class="contenedor-general-negro overflow-hidden container-fluid d-flex flex-column p-0 w-100 h-100">
+    <div class="contenedor-general-negro container-fluid d-flex flex-row p-0 w-100 h-100">
 
-        <!-- barra superior -->
-        <div class="barra-superior-estatica container-fluid d-flex flex-row w-100 align-content-center">
-            <div class="h-100 logo-principal-sreamfy align-content-center">
+        <!-- barra lateral (estatico) -->
+        <div id="bdSidebar" class="barralateral d-flex flex-column flex-shrink-0 bg-white texto-color-morado"
+            data-bs-scroll="true">
+
+            <div class="logo-principal-sreamfy align-content-center">
                 <a href="#" class="logo-principal-sreamfy-texto container-fluid d-flex align-content-center">
-                    <img src="Imagenes/logo_mejorado-removebg%20-%20Copy.png" />
+                    <img src="Imagenes/nuevologo.png" />
                 </a>
             </div>
-            <div class="m-0 p-0 h-100 container-fluid d-flex flex-row align-content-center justify-content-center">
-                <div class="w-75 d-flex flex-row align-content-center align-items-center buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" class="input-text-normal" placeholder="Buscar"/>
-                </div>
-                <div class="nombreUsuario container-fluid w-25 d-flex flex-column">
-                    <div class="b-0 m-0 p-0">
-                        <button class="btn dropdown-toggle dropdown-master-user m-0 p-0" id="btnUsuario" data-bs-toggle="dropdown" type="button" aria-expanded="false">
-                            <img src="Imagenes/yo.jpg" class="image-profile-pic-mini img-fluid"/>
-                            <label class="nombre-usuario-dropdown">Silvana Quiroz</label>
-                            
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-streamfy">
-                            <a href="ArtistaPerfil.aspx" class="dropdown-item dropdown-item-perfil-user">Mi perfil</a>
-                            <a href="GestionarPerfilArtista.aspx" class="dropdown-item dropdown-item-perfil-user">Editar cuenta</a>
-                            
-                            <!-- editar esto con el link del reporte o lo q dispare eso -->
-                            <a href="VerReporteArtista.aspx" class="dropdown-item dropdown-item-perfil-user">Ver reporte</a>
+
+            <div class="flex-column" id="sidebarOpciones">
+                
+
+                <!-- OPCIONES PARA AGREGAR -->
+                <a href="#">
+                    <div id="opPerfil" class="sidebarPillCustomized">
+                        <i class="fa-solid fa-user"></i>
+                        Mi perfil
+                    </div>
+                </a>
+
+                <a href="index.html">
+                    <div id="opFinanzasPersonales" class="sidebarPillCustomized">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        Finanzas personales
+                    </div>
+                </a>
+                <a href="#">
+                    <div id="opFinanzasEmpresariales" class="sidebarPillCustomized">
+                        <i class="fa-regular fa-building"></i>
+                        Finanzas empresariales
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div id="opAcademico" class="sidebarPillCustomized">
+                        <i class="fa-regular fa-hundred-points"></i>
+                        Rendimiento académico
+                    </div>
+                </a>
+                <a href="#">
+                    <div id="opDeportivo" class="sidebarPillCustomized">
+                        <i class="fa-solid fa-person-running"></i>
+                        Rendimiento deportivo
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="container-fluid p-0 m-0 contenedor-general-enorme">
+            <!-- barra superior -->
+            <div class="barra-superior-estatica container-fluid d-flex flex-row w-100 align-content-center">
+
+                <div class="m-0 p-0 h-100 container-fluid d-flex flex-row align-content-center justify-content-center">
+                    <div class="w-75 d-flex flex-row align-content-center align-items-center buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="input-text-normal" placeholder="Buscar" />
+                    </div>
+                    <div class="nombreUsuario container-fluid w-25 d-flex flex-column">
+                        <div class="b-0 m-0 p-0">
+                            <button class="btn dropdown-toggle dropdown-master-user m-0 p-0" id="btnUsuario"
+                                data-bs-toggle="dropdown" type="button" aria-expanded="false">
+                                <img src="Imagenes/yo.jpg" class="image-profile-pic-mini img-fluid" />
+                                <label class="nombre-usuario-dropdown">Silvana Quiroz</label>
+
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-streamfy">
+                                <a href="#" class="dropdown-item dropdown-item-perfil-user">Mi perfil</a>
+                                <a href="#" class="dropdown-item dropdown-item-perfil-user">Editar cuenta</a>
+
+                                <!-- editar esto con el link del reporte o lo q dispare eso -->
+                                <a href="#" class="dropdown-item dropdown-item-perfil-user">Ver reporte</a>
 
 
-                            <a data-bs-toggle="modal" data-bs-target="#cerrarSesionModal" style="cursor: pointer;">
-                                <div id="opCerrarSesion" class="dropdown-item dropdown-item-perfil-user">
-                                    Cerrar sesión
-                                </div>
-                            </a>
+                                <a data-bs-toggle="modal" data-bs-target="#cerrarSesionModal" style="cursor: pointer;">
+                                    <div id="opCerrarSesion" class="dropdown-item dropdown-item-perfil-user">
+                                        Cerrar sesión
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
 
+            <!-- contenido total -->
+            <div class="contenedor-general-negro container-fluid d-flex flex-row p-0 h-100">
 
+                <!-- contenedor derecha -->
+                <div class="contenedor-derecha-grande container-fluid d-flex flex-row w-100">
 
-        </div>
-        
-        <!-- contenido total -->
-        <div class="contenedor-general-negro overflow-hidden container-fluid d-flex flex-row p-0 h-100">
-
-            <!-- barra lateral (estatico) -->
-            <div id="bdSidebar" class="barralateral d-flex flex-column flex-shrink-0 bg-white texto-color-morado" data-bs-scroll="true">
-
-                <div class="flex-column" id="sidebarOpciones">
-
-                    <!-- OPCIONES PARA AGREGAR -->
-                    <a href="#">
-                        <div id="opPerfil" class="sidebarPillCustomized">
-                            <i class="fa-solid fa-user"></i>
-                            Mi perfil
-                        </div>
-                    </a>
-
-                    <a href="index.html">
-                        <div id="opFinanzasPersonales" class="sidebarPillCustomized">
-                            <i class="fa-solid fa-arrow-trend-up"></i>
-                            Finanzas personales
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div id="opFinanzasEmpresariales" class="sidebarPillCustomized">
-                            <i class="fa-regular fa-building"></i>
-                            Finanzas empresariales
-                        </div>
-                    </a>
-
-                    <a href="#">
-                        <div id="opAcademico" class="sidebarPillCustomized">
-                            <i class="fa-regular fa-hundred-points"></i>
-                            Rendimiento académico
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div id="opDeportivo" class="sidebarPillCustomized">
-                            <i class="fa-solid fa-person-running"></i>
-                            Rendimiento deportivo
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- contenedor derecha -->
-            <div class="contenedor-derecha-grande container-fluid d-flex flex-row w-100">
-
-                <!-- contenido central (variable) -->
-                <div class="contenidoCentralVariable d-flex flex-column w-100 h-100">
-                    <style>
-                        /* Contenedor que cubre toda la página */
-                        .loading-container {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            position: fixed;
-                            top: 0;
-                            left: 0;
-                            width: 100vw;
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-                            z-index: 9999;
-                            display: none; /* Iniciar oculto */
-                        }
-                
-                        /* Spinner centralizado */
-                        .spinner {
-                            font-size: 70px;
-                            color: #0179c3; /* Color de los circulitos */
-                            animation: spin 0.5s linear infinite; /* Movimiento rápido */
-                        }
-                
-                        /* Animación de rotación para el spinner */
-                        @keyframes spin {
-                            0% {
-                                transform: rotate(0deg);
+                    <!-- contenido central (variable) -->
+                    <div class="contenidoCentralVariable d-flex flex-column w-100 h-100">
+                        <style>
+                            /* Contenedor que cubre toda la página */
+                            .loading-container {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100vw;
+                                height: 100vh;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                /* Fondo semi-transparente */
+                                z-index: 9999;
+                                display: none;
+                                /* Iniciar oculto */
                             }
-                
-                            100% {
-                                transform: rotate(360deg);
+
+                            /* Spinner centralizado */
+                            .spinner {
+                                font-size: 70px;
+                                color: #0179c3;
+                                /* Color de los circulitos */
+                                animation: spin 0.5s linear infinite;
+                                /* Movimiento rápido */
                             }
-                        }
-                    </style>
-                    <form runat="server" class="container-fluid d-flex h-100 flex-column">
-                
-                        <div class="container-fluid d-flex flex-row container-cabecera-finanzas">
-                            <div id="swOp1" class="card-principal d-flex flex-row justify-content-center align-content-center">
-                                <i class="fa-regular fa-money-bill-trend-up icon-card-grande icon-card-cabecera"></i>
-                                <div class="subtitulo-card-grande">
-                                    Reporte financiero mensual
-                                </div>
-                            </div>
-                            <div class="separador-vertical"></div>
-                            <div id="swOp2" class="card-principal d-flex flex-row justify-content-center align-content-center">
-                                <i class="fa-regular fa-list-dropdown icon-card-grande" style="color: #27a8e7"></i>
-                                <div class="subtitulo-card-grande">
-                                    Reporte detallado de gastos
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- opcion 2-->
-                        <div id="opcion2" class="container-fluid d-flex flex-column container-central">
-                            <div class="container-fluid d-flex flex-column align-content-center align-items-center">
-                                <div class="subtitulo-barras container-fluid">
-                                    Ingresar gastos
-                                </div>
-                                <div class="d-flex mb-3 gap-5">
-                                    <button id="agregarmanual" style="color: #107c42" class="bg-transparent border-0 boton-agregar"><i class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
-                                    <asp:FileUpload ID="FileUpload1" ClientIDMode="Static" runat="server" CssClass="bg-transparent border-0 boton-agregar" hidden onchange="redirectToGastosDetallado()" />
-                                    <button style="color: #107c42" class="bg-transparent border-0 boton-agregar" onclick="triggerFileUpload()"><i class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
-                                </div>
-                                <div class="d-flex mb-3 gap-5">
-                                    <a href="GastosDetallado.html" style="color: #107c42" class="boton-procesar" onclick="startLoading()">
-                                        <i class="fa-solid fa-check me-2"></i>Procesar
-                                    </a>
-                                </div>
-                            </div>
-                
-                            <div class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
-                                <div class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                    <div class="normal-ancho">
-                                        Fecha
-                                    </div>
-                                    <div class="descripcion-ancho">
-                                        Descripción
-                                    </div>
-                                    <div class="normal-ancho">
-                                        Monto
-                                    </div>
-                                    <div class="normal-ancho">
-                                        Categoría
-                                    </div>
-                                    <div class="delete-ancho">
-                                    </div>
-                                </div>
-                                <hr />
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <select name="categorias" class="normal-ancho input-dashpro-tabla dropdown-categoria">
-                                                <option value="">Seleccionar</option>
-                                                <option value="Alimentos">Alimentos</option>
-                                                <option value="Ropa">Ropa</option>
-                                                <option value="Salidas">Salidas</option>
-                                                <option value="Transporte">Transporte</option>
-                                                <option value="Viajes">Viajes</option>
-                                            </select>
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <select name="categorias" class="normal-ancho input-dashpro-tabla dropdown-categoria">
-                                                <option value="">Seleccionar</option>
-                                                <option value="Alimentos">Alimentos</option>
-                                                <option value="Ropa">Ropa</option>
-                                                <option value="Salidas">Salidas</option>
-                                                <option value="Transporte">Transporte</option>
-                                                <option value="Viajes">Viajes</option>
-                                            </select>
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <select name="categorias" class="normal-ancho input-dashpro-tabla dropdown-categoria">
-                                                <option value="">Seleccionar</option>
-                                                <option value="Alimentos">Alimentos</option>
-                                                <option value="Ropa">Ropa</option>
-                                                <option value="Salidas">Salidas</option>
-                                                <option value="Transporte">Transporte</option>
-                                                <option value="Viajes">Viajes</option>
-                                            </select>
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <select name="categorias" class="normal-ancho input-dashpro-tabla dropdown-categoria">
-                                                <option value="">Seleccionar</option>
-                                                <option value="Alimentos">Alimentos</option>
-                                                <option value="Ropa">Ropa</option>
-                                                <option value="Salidas">Salidas</option>
-                                                <option value="Transporte">Transporte</option>
-                                                <option value="Viajes">Viajes</option>
-                                            </select>
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <select name="categorias" class="normal-ancho input-dashpro-tabla dropdown-categoria">
-                                                <option value="">Seleccionar</option>
-                                                <option value="Alimentos">Alimentos</option>
-                                                <option value="Ropa">Ropa</option>
-                                                <option value="Salidas">Salidas</option>
-                                                <option value="Transporte">Transporte</option>
-                                                <option value="Viajes">Viajes</option>
-                                            </select>
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                
-                        <!-- opcion1-->
-                        <div id="opcion1" class="container-fluid d-none flex-column container-central">
-                            <div class="container-fluid d-flex flex-column align-content-center align-items-center">
-                                <div class="subtitulo-barras container-fluid">
-                                    Gastos
-                                </div>
-                                <div class="d-flex mt-1 mb-5 gap-5">
-                                    <a href="GastosDetallado.html" style="color: #107c42" class="boton-procesar" onclick="startLoading()">
-                                        <i class="fa-solid fa-check me-2"></i>Procesar
-                                    </a>
-                                </div>
-                                <div class="d-flex mb-3 gap-5">
-                                    <button  style="color: #107c42" class="bg-transparent border-0 boton-agregar"><i class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
-                                    <asp:FileUpload ID="FileUpload2" ClientIDMode="Static" runat="server" CssClass="bg-transparent border-0 boton-agregar" hidden />
-                                    <button style="color: #107c42" class="bg-transparent border-0 boton-agregar" onclick="triggerFileUpload()"><i class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
-                                </div>
-                
-                            </div>
-                
-                            <div class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
-                                <div class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                    <div class="normal-ancho">
-                                        Fecha
-                                    </div>
-                                    <div class="descripcion-ancho">
-                                        Descripción
-                                    </div>
-                                    <div class="normal-ancho">
-                                        Monto
-                                    </div>
-                                    <div class="delete-ancho">
-                                    </div>
-                                </div>
-                                <hr />
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="container-fluid d-flex flex-column align-content-center align-items-center">
-                                <div class="subtitulo-barras container-fluid">
-                                    Ingresos
-                                </div>
-                                <div class="d-flex mb-3 gap-5">
-                                    <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"><i class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
-                                    <asp:FileUpload ID="FileUpload3" ClientIDMode="Static" runat="server" CssClass="bg-transparent border-0 boton-agregar" hidden />
-                                    <button style="color: #107c42" class="bg-transparent border-0 boton-agregar" onclick="triggerFileUpload()"><i class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
-                                </div>
-                            </div>
-                
-                            <div class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
-                                <div class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                    <div class="normal-ancho">
-                                        Fecha
-                                    </div>
-                                    <div class="descripcion-ancho">
-                                        Descripción
-                                    </div>
-                                    <div class="normal-ancho">
-                                        Monto
-                                    </div>
-                                    <div class="delete-ancho">
-                                    </div>
-                                </div>
-                                <hr />
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="container-fluid d-none flex-column">
-                                    <div class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
-                                        <div>
-                                            <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="descripcion-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div>
-                                            <input type="text" class="normal-ancho input-dashpro-tabla" />
-                                        </div>
-                                        <div class="delete-ancho justify-content-center align-content-center align-items-center">
-                                            <i class="fa-solid fa-trash remove-icon"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                
-                        </div>
-                
-                        <script>
-                            function triggerFileUpload() {
-                                // Obtener el control de FileUpload de ASP.NET por su ID
-                                var fileUploadControl = document.getElementById('<%= FileUpload1.ClientID %>');
-                
-                                // Simular el clic en el control FileUpload
-                                fileUploadControl.click();
+
+                            /* Animación de rotación para el spinner */
+                            @keyframes spin {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                }
                             }
-                
-                            document.addEventListener("DOMContentLoaded", function () {
-                                // Obtener el botón de "Agregar manualmente"
-                                const btnAgregar = document.getElementById('agregarmanual');
-                                const filas = document.querySelectorAll('.tabla-gastos .container-fluid.d-none');
-                
-                                // Verificar si ya se ha guardado el estado de visibilidad en el localStorage
-                                const filasMostradas = JSON.parse(localStorage.getItem('filasMostradas')) || [];
-                
-                                // Mostrar las filas que ya fueron mostradas antes
-                                filasMostradas.forEach(index => {
-                                    if (filas[index]) {
-                                        filas[index].classList.remove('d-none');
-                                        filas[index].classList.add('d-flex');
-                                    }
-                                });
-                
-                                // Asignar el evento de clic al botón
-                                btnAgregar.addEventListener('click', function () {
-                                    // Verificar si hay filas disponibles
-                                    for (let i = 0; i < filas.length; i++) {
-                                        if (filas[i].classList.contains('d-none')) {
-                                            // Cambiar la clase de "d-none" a "d-flex" en la primera fila oculta
-                                            filas[i].classList.remove('d-none');
-                                            filas[i].classList.add('d-flex');
-                
-                                            // Guardar el índice de la fila mostrada en el localStorage
-                                            filasMostradas.push(i);
-                                            localStorage.setItem('filasMostradas', JSON.stringify(filasMostradas));
-                
-                                            break; // Solo cambiar la clase de una fila a la vez
+                        </style>
+                        <form runat="server" class="container-fluid d-flex h-100 flex-column">
+
+                            <div class="container-fluid d-flex flex-row container-cabecera-finanzas">
+                                <div id="swOp1"
+                                    class="card-principal d-flex flex-row justify-content-center align-content-center">
+                                    <i
+                                        class="fa-regular fa-money-bill-trend-up icon-card-grande icon-card-cabecera"></i>
+                                    <div class="subtitulo-card-grande">
+                                        Reporte financiero mensual
+                                    </div>
+                                </div>
+                                <div class="separador-vertical"></div>
+                                <div id="swOp2"
+                                    class="card-principal d-flex flex-row justify-content-center align-content-center">
+                                    <i class="fa-regular fa-list-dropdown icon-card-grande" style="color: #27a8e7"></i>
+                                    <div class="subtitulo-card-grande">
+                                        Reporte detallado de gastos
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- opcion 2-->
+                            <div id="opcion2" class="container-fluid d-flex flex-column container-central">
+                                <div class="container-fluid d-flex flex-column align-content-center align-items-center">
+                                    <div class="subtitulo-barras container-fluid">
+                                        Ingresar gastos
+                                    </div>
+                                    <div class="d-flex mb-3 gap-5">
+                                        <button id="agregarmanual" style="color: #107c42"
+                                            class="bg-transparent border-0 boton-agregar"><i
+                                                class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
+                                        <input type="file" id="FileUpload1"
+                                            class="bg-transparent border-0 boton-agregar" accept=".xlsx" hidden />
+                                        <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"
+                                            onclick="triggerFileUpload()"><i
+                                                class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
+                                    </div>
+                                    <div class="d-flex mb-3 gap-5">
+                                        <a href="GastosDetallado.html" style="color: #107c42" class="boton-procesar"
+                                            onclick="startLoading()">
+                                            <i class="fa-solid fa-check me-2"></i>Procesar
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
+                                    <div
+                                        class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                        <div class="normal-ancho">
+                                            Fecha
+                                        </div>
+                                        <div class="descripcion-ancho">
+                                            Descripción
+                                        </div>
+                                        <div class="normal-ancho">
+                                            Monto
+                                        </div>
+                                        <div class="normal-ancho">
+                                            Categoría
+                                        </div>
+                                        <div class="delete-ancho">
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <select name="categorias"
+                                                    class="normal-ancho input-dashpro-tabla dropdown-categoria">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="Alimentos">Alimentos</option>
+                                                    <option value="Ropa">Ropa</option>
+                                                    <option value="Salidas">Salidas</option>
+                                                    <option value="Transporte">Transporte</option>
+                                                    <option value="Viajes">Viajes</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <select name="categorias"
+                                                    class="normal-ancho input-dashpro-tabla dropdown-categoria">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="Alimentos">Alimentos</option>
+                                                    <option value="Ropa">Ropa</option>
+                                                    <option value="Salidas">Salidas</option>
+                                                    <option value="Transporte">Transporte</option>
+                                                    <option value="Viajes">Viajes</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <select name="categorias"
+                                                    class="normal-ancho input-dashpro-tabla dropdown-categoria">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="Alimentos">Alimentos</option>
+                                                    <option value="Ropa">Ropa</option>
+                                                    <option value="Salidas">Salidas</option>
+                                                    <option value="Transporte">Transporte</option>
+                                                    <option value="Viajes">Viajes</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <select name="categorias"
+                                                    class="normal-ancho input-dashpro-tabla dropdown-categoria">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="Alimentos">Alimentos</option>
+                                                    <option value="Ropa">Ropa</option>
+                                                    <option value="Salidas">Salidas</option>
+                                                    <option value="Transporte">Transporte</option>
+                                                    <option value="Viajes">Viajes</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <select name="categorias"
+                                                    class="normal-ancho input-dashpro-tabla dropdown-categoria">
+                                                    <option value="">Seleccionar</option>
+                                                    <option value="Alimentos">Alimentos</option>
+                                                    <option value="Ropa">Ropa</option>
+                                                    <option value="Salidas">Salidas</option>
+                                                    <option value="Transporte">Transporte</option>
+                                                    <option value="Viajes">Viajes</option>
+                                                </select>
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- opcion1-->
+                            <div id="opcion1" class="container-fluid d-none flex-column container-central">
+                                <div class="container-fluid d-flex flex-column align-content-center align-items-center">
+                                    <div class="subtitulo-barras container-fluid">
+                                        Gastos
+                                    </div>
+                                    <div class="d-flex mt-1 mb-5 gap-5">
+                                        <a href="GastosDetallado.html" style="color: #107c42" class="boton-procesar"
+                                            onclick="startLoading()">
+                                            <i class="fa-solid fa-check me-2"></i>Procesar
+                                        </a>
+                                    </div>
+                                    <div class="d-flex mb-3 gap-5">
+                                        <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"><i
+                                                class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
+                                        <input type="file" id="FileUpload2"
+                                            class="bg-transparent border-0 boton-agregar" accept=".xlsx" hidden />
+                                        <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"
+                                            onclick="triggerFileUpload2()"><i
+                                                class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
+                                    </div>
+
+                                </div>
+
+                                <div
+                                    class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
+                                    <div
+                                        class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                        <div class="normal-ancho">
+                                            Fecha
+                                        </div>
+                                        <div class="descripcion-ancho">
+                                            Descripción
+                                        </div>
+                                        <div class="normal-ancho">
+                                            Monto
+                                        </div>
+                                        <div class="delete-ancho">
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid d-flex flex-column align-content-center align-items-center">
+                                    <div class="subtitulo-barras container-fluid">
+                                        Ingresos
+                                    </div>
+                                    <div class="d-flex mb-3 gap-5">
+                                        <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"><i
+                                                class="fa-solid fa-plus me-2"></i>Agregar manualmente</button>
+
+                                        <button style="color: #107c42" class="bg-transparent border-0 boton-agregar"
+                                            onclick="triggerFileUpload2()"><i
+                                                class="fa-solid fa-file-excel me-2"></i>Agregar desde archivo</button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="tabla-gastos d-flex flex-column justify-content-center align-content-center">
+                                    <div
+                                        class="cabecera-tabla container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                        <div class="normal-ancho">
+                                            Fecha
+                                        </div>
+                                        <div class="descripcion-ancho">
+                                            Descripción
+                                        </div>
+                                        <div class="normal-ancho">
+                                            Monto
+                                        </div>
+                                        <div class="delete-ancho">
+                                        </div>
+                                    </div>
+                                    <hr />
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid d-none flex-column">
+                                        <div
+                                            class="container-fluid d-flex flex-row align-content-center p-0 m-0 gap-3 justify-content-center">
+                                            <div>
+                                                <input type="date" class="normal-ancho input-dashpro-tabla pe-3" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="descripcion-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div>
+                                                <input type="text" class="normal-ancho input-dashpro-tabla" />
+                                            </div>
+                                            <div
+                                                class="delete-ancho justify-content-center align-content-center align-items-center">
+                                                <i class="fa-solid fa-trash remove-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <script>
+                                function triggerFileUpload() {
+                                    // Obtener el control de FileUpload de ASP.NET por su ID
+                                    var fileUploadControl = document.getElementById("FileUpload1");
+
+                                    // Simular el clic en el control FileUpload
+                                    fileUploadControl.click();
+                                }
+
+                                function triggerFileUpload2() {
+                                    // Obtener el control de FileUpload de ASP.NET por su ID
+                                    var fileUploadControl = document.getElementById("FileUpload2");
+
+                                    // Simular el clic en el control FileUpload
+                                    fileUploadControl.click();
+                                }
+
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    // Obtener el botón de "Agregar manualmente"
+                                    const btnAgregar = document.getElementById('agregarmanual');
+                                    const filas = document.querySelectorAll('.tabla-gastos .container-fluid.d-none');
+
+                                    // Verificar si ya se ha guardado el estado de visibilidad en el localStorage
+                                    const filasMostradas = JSON.parse(localStorage.getItem('filasMostradas')) || [];
+
+                                    // Mostrar las filas que ya fueron mostradas antes
+                                    filasMostradas.forEach(index => {
+                                        if (filas[index]) {
+                                            filas[index].classList.remove('d-none');
+                                            filas[index].classList.add('d-flex');
                                         }
-                                    }
-                                });
-                
-                                // Añadir evento para los botones de remover
-                                const btnRemoveIcons = document.querySelectorAll('.remove-icon'); // Seleccionamos todos los botones de remover
-                
-                                btnRemoveIcons.forEach(function (icon, index) {
-                                    icon.addEventListener('click', function () {
-                                        const fila = icon.closest('.container-fluid.d-flex'); // Buscamos la fila correspondiente
-                
-                                        // Cambiar las clases para ocultar la fila
-                                        if (fila) {
-                                            fila.classList.remove('d-flex');
-                                            fila.classList.add('d-none');
-                
-                                            // Actualizar el localStorage para reflejar el cambio
-                                            let filasMostradas = JSON.parse(localStorage.getItem('filasMostradas')) || [];
-                                            const filaIndex = filasMostradas.indexOf(index);
-                
-                                            // Si el índice existe en filasMostradas, lo eliminamos
-                                            if (filaIndex > -1) {
-                                                filasMostradas.splice(filaIndex, 1);
+                                    });
+
+                                    // Asignar el evento de clic al botón
+                                    btnAgregar.addEventListener('click', function () {
+                                        // Verificar si hay filas disponibles
+                                        for (let i = 0; i < filas.length; i++) {
+                                            if (filas[i].classList.contains('d-none')) {
+                                                // Cambiar la clase de "d-none" a "d-flex" en la primera fila oculta
+                                                filas[i].classList.remove('d-none');
+                                                filas[i].classList.add('d-flex');
+
+                                                // Guardar el índice de la fila mostrada en el localStorage
+                                                filasMostradas.push(i);
                                                 localStorage.setItem('filasMostradas', JSON.stringify(filasMostradas));
+
+                                                break; // Solo cambiar la clase de una fila a la vez
                                             }
                                         }
                                     });
+
+                                    // Añadir evento para los botones de remover
+                                    const btnRemoveIcons = document.querySelectorAll('.remove-icon'); // Seleccionamos todos los botones de remover
+
+                                    btnRemoveIcons.forEach(function (icon, index) {
+                                        icon.addEventListener('click', function () {
+                                            const fila = icon.closest('.container-fluid.d-flex'); // Buscamos la fila correspondiente
+
+                                            // Cambiar las clases para ocultar la fila
+                                            if (fila) {
+                                                fila.classList.remove('d-flex');
+                                                fila.classList.add('d-none');
+
+                                                // Actualizar el localStorage para reflejar el cambio
+                                                let filasMostradas = JSON.parse(localStorage.getItem('filasMostradas')) || [];
+                                                const filaIndex = filasMostradas.indexOf(index);
+
+                                                // Si el índice existe en filasMostradas, lo eliminamos
+                                                if (filaIndex > -1) {
+                                                    filasMostradas.splice(filaIndex, 1);
+                                                    localStorage.setItem('filasMostradas', JSON.stringify(filasMostradas));
+                                                }
+                                            }
+                                        });
+                                    });
                                 });
-                            });
-                
-                            // Función para activar el spinner y el fondo transparente
-                            function startLoading() {
-                                var loadingContainer = document.getElementById('loadingContainer');
-                                loadingContainer.style.display = 'flex';  // Muestra el contenedor de carga
-                
-                                // Aquí simula el procesamiento, y luego redirige al usuario después de 2 segundos
-                                setTimeout(function () {
-                                    loadingContainer.style.display = 'none'; // Oculta el spinner después de 2 segundos
-                                    window.location.href = 'GastosDetallado.aspx'; // Redirige después de cargar
-                                }, 2000); // Ajusta este tiempo para hacerlo más lento (2 segundos)
-                            }
-                
-                            document.addEventListener("DOMContentLoaded", function () {
-                                const opcion1 = document.getElementById('swOp1');
-                                const opcion2 = document.getElementById('swOp2');
-                                const contOp1 = document.getElementById('opcion1');
-                                const contOp2 = document.getElementById('opcion2');
-                
-                                opcion1.addEventListener('click', function () {
-                                    if (contOp1.classList.contains("d-none")) {
-                                        contOp1.classList.remove("d-none");
-                                        contOp1.classList.add("d-flex");
-                
-                                        contOp2.classList.add("d-none");
-                                        contOp2.classList.remove("d-flex");
-                                    }
-                                });
-                
-                                opcion2.addEventListener('click', function () {
-                                    if (contOp2.classList.contains("d-none")) {
-                                        contOp2.classList.remove("d-none");
-                                        contOp2.classList.add("d-flex");
-                
-                                        contOp1.classList.add("d-none");
-                                        contOp1.classList.remove("d-flex");
-                                    }
-                                });
-                
-                            });
-                
-                            // Esta función se ejecuta cuando el usuario selecciona un archivo
-                            function redirectToGastosDetallado() {
-                                // Puedes agregar una validación aquí si quieres comprobar que se ha seleccionado un archivo
-                                var fileInput = document.getElementById('FileUpload1');
-                                if (fileInput.files.length > 0) { // Verifica si se ha seleccionado un archivo
-                                    window.location.href = "GastosDetallado.aspx"; // Redirige a la página deseada
+
+                                // Función para activar el spinner y el fondo transparente
+                                function startLoading() {
+                                    var loadingContainer = document.getElementById('loadingContainer');
+                                    loadingContainer.style.display = 'flex';  // Muestra el contenedor de carga
+
+                                    // Aquí simula el procesamiento, y luego redirige al usuario después de 2 segundos
+                                    setTimeout(function () {
+                                        loadingContainer.style.display = 'none'; // Oculta el spinner después de 2 segundos
+                                        window.location.href = 'GastosDetallado.aspx'; // Redirige después de cargar
+                                    }, 2000); // Ajusta este tiempo para hacerlo más lento (2 segundos)
                                 }
-                            }
-                        </script>
-                
-                    </form>
-                
-                    <!-- Contenedor de carga con el spinner -->
-                    <div class="loading-container" id="loadingContainer">
-                        <div class="spinner">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <!-- Spinner que gira -->
+
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    const opcion1 = document.getElementById('swOp1');
+                                    const opcion2 = document.getElementById('swOp2');
+                                    const contOp1 = document.getElementById('opcion1');
+                                    const contOp2 = document.getElementById('opcion2');
+
+                                    opcion1.addEventListener('click', function () {
+                                        if (contOp1.classList.contains("d-none")) {
+                                            contOp1.classList.remove("d-none");
+                                            contOp1.classList.add("d-flex");
+
+                                            contOp2.classList.add("d-none");
+                                            contOp2.classList.remove("d-flex");
+                                        }
+                                    });
+
+                                    opcion2.addEventListener('click', function () {
+                                        if (contOp2.classList.contains("d-none")) {
+                                            contOp2.classList.remove("d-none");
+                                            contOp2.classList.add("d-flex");
+
+                                            contOp1.classList.add("d-none");
+                                            contOp1.classList.remove("d-flex");
+                                        }
+                                    });
+
+                                });
+
+                                // Esta función se ejecuta cuando el usuario selecciona un archivo
+                                function redirectToGastosDetallado() {
+                                    // Puedes agregar una validación aquí si quieres comprobar que se ha seleccionado un archivo
+                                    var fileInput = document.getElementById('FileUpload1');
+                                    if (fileInput.files.length > 0) { // Verifica si se ha seleccionado un archivo
+                                        window.location.href = "GastosDetallado.aspx"; // Redirige a la página deseada
+                                    }
+                                }
+                            </script>
+
+                        </form>
+
+                        <!-- Contenedor de carga con el spinner -->
+                        <div class="loading-container" id="loadingContainer">
+                            <div class="spinner">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <!-- Spinner que gira -->
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
-
         </div>
 
 
-        <!-- modal de confirmacion -->
-        <!-- Modal -->
-        <div class="modal fade" id="cerrarSesionModal" tabindex="-1" aria-labelledby="cerrarSesionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal-streamfy">
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title" id="guardarModalLabel">Cerrar sesión</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body border-0">
-                        ¿Estás seguro de que deseas cerrar sesión?
-                    </div>
-                    <div class="modal-footer border-0">
-                        <button type="button" class="boton-confirmar-streamfy cancelar-boton-streamfy modal-cancelar" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="boton-confirmar-streamfy" id="confirmarCerrarSesion" onclick="cerrarSesion()">Salir</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
     </div>
 

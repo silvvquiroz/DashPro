@@ -48,12 +48,14 @@ body {
 
 
 .logo-principal-sreamfy {
+    margin: 20px;
+    margin-top: 40px;
     width: 410px !important;
     margin-right: 10px;
 }
 
 .logo-principal-sreamfy-texto {
-    height: 80px;
+    height: 100px;
 }
 
 .barralateral {
@@ -170,9 +172,7 @@ body {
     padding: 0;
     padding-right: 20px;
     padding-bottom: 20px;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: scroll; /* Add vertical scrollbar */
-    scrollbar-width: none;
+    
 }
 
 .subseccion {
@@ -292,9 +292,6 @@ body {
     color: #7a797f;
 }
 
-.dropdown-master-user:hover .nombre-usuario-dropdown {
-    color: var(--barra-lateral-texto-color-claro);
-}
 
 .dropdown-item-perfil-user {
     background: rgb(0,0,0,0) !important;
@@ -303,7 +300,11 @@ body {
 }
 
     .dropdown-item-perfil-user:hover {
-        color: var(--barra-lateral-texto-color-claro) !important;
+        cursor: pointer;
+    }
+
+    .nombre-usuario-dropdown:hover {
+        cursor: pointer;
     }
 
 /*FORMS ESTILOS STREAMFY*/
@@ -321,4 +322,10 @@ body {
     background: none;
     margin-left: 10px;
     color: var(--texto-gris-clarito);
+}
+
+.contenedor-general-enorme {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
+    scrollbar-width: none;
 }
